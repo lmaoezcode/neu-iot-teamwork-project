@@ -1,0 +1,40 @@
+# Dependencies and build output
+node_modules/
+dist/
+coverage/
+.vite/
+.pio/
+tools/.pio-venv/
+tools/.pio-core/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+config/*.local
+config/*.local.env
+firmware/esp32/include/secrets.hpp
+infrastructure/mqtt/runtime/
+infrastructure/mqtt/*.local.conf
+
+# Runtime database and logs
+data/*.sqlite3
+data/*.sqlite3-wal
+data/*.sqlite3-shm
+data/*.db
+data/backups/
+data/logs/
+
+# Editor/OS files
+.vscode/
+.idea/
+*.log
+tools/*.exe
+tools/.mosquitto/
+tools/.downloads/
+Thumbs.db
+Desktop.ini
+
+# Local package store and large local archives
+.pnpm-store/
+data/*.zip

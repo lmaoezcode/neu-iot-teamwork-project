@@ -1,0 +1,47 @@
+{
+  "integration_version": "stage17-1.0-draft",
+  "status": "software_chain_verified_hardware_pending",
+  "verified_on": "2026-09-29",
+  "device_id": "room-01",
+  "components": {
+    "uno_firmware": "1.0",
+    "esp32_firmware": "1.0",
+    "mqtt_broker": "Mosquitto 2.1.x",
+    "server": "1.0+CR-04",
+    "database": "1.0/migration-001",
+    "web": "1.0"
+  },
+  "contracts": {
+    "uno_esp32_protocol": {
+      "document_version": "1.0",
+      "wire_version_hex": "0x10",
+      "uart": "19200 8N1"
+    },
+    "mqtt": {
+      "document_version": "1.0",
+      "protocol": "3.1.1",
+      "schema": "smartroom.mqtt",
+      "schema_version": 1,
+      "topic_root": "smartroom/v1/devices"
+    },
+    "http_sse": {
+      "api_version": "stage14-contract-1.0+CR-04",
+      "sse_replay": true,
+      "session_cookie": true,
+      "csrf_header": "x-csrf-token"
+    },
+    "sqlite": {
+      "user_version": 1,
+      "strict_tables": true,
+      "wal": true
+    }
+  },
+  "evidence": {
+    "software_chain": "verified_with_stage17_simulator",
+    "uno_board": "pending_user_evidence",
+    "esp32_board": "pending_user_evidence",
+    "uart_level_shifter": "pending_user_measurement",
+    "wifi_from_esp32": "pending_user_evidence",
+    "physical_sensors_and_outputs": "pending_user_evidence"
+  }
+}

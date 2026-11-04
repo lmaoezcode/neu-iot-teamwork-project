@@ -1,0 +1,8 @@
+ssid=[REDACTED]
+password=[REDACTED]
+Authorization: [REDACTED]
+smartroom_session=[REDACTED]; Path=/
+mqtt://[USERINFO_REDACTED]@[IP_REDACTED]:1883
+device_mac=[MAC_REDACTED]
+loopback=127.0.0.1
+[PRIVATE_KEY_REDACTED]

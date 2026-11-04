@@ -1,0 +1,10 @@
+ssid=TEST_ONLY_WIFI
+password=Mat-khau-thu-nghiem-stage17
+Authorization: Bearer test-only-stage17-token
+smartroom_session=test-only-session-cookie; Path=/
+mqtt://device-user:test-only-password@192.168.10.20:1883
+device_mac=AA:BB:CC:DD:EE:FF
+loopback=127.0.0.1
+-----BEGIN PRIVATE KEY-----
+TEST-ONLY-NOT-A-REAL-KEY
+-----END PRIVATE KEY-----

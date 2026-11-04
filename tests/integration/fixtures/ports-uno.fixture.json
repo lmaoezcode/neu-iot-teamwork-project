@@ -1,0 +1,11 @@
+{
+  "schema": "smartroom.board-port-snapshot",
+  "schema_version": 1,
+  "captured_at": "2026-09-29T06:01:00.000Z",
+  "scope": "FIXTURE — không phải dữ liệu phần cứng",
+  "hardware_evidence": false,
+  "ports": [
+    { "port": "COM3", "name": "Fixture existing port", "hint": "test only" },
+    { "port": "COM7", "name": "Fixture UNO candidate", "hint": "test only" }
+  ]
+}

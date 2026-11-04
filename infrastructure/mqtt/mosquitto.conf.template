@@ -1,0 +1,39 @@
+# Cấu hình được tạo thành runtime/mosquitto.generated.conf bởi Initialize-Mqtt.ps1.
+# Không thay thế các token bằng bí mật rồi commit file này.
+
+# Xác thực/ủy quyền bằng plugin chính thức của Mosquitto 2.1.x.
+global_plugin {{PASSWORD_PLUGIN}}
+plugin_opt_password_file {{PASSWORD_FILE}}
+global_plugin {{ACL_PLUGIN}}
+plugin_opt_acl_file {{ACL_FILE}}
+
+# Listener MQTT 3.1.1 trong mạng LAN. Không chuyển tiếp cổng này ra Internet.
+listener {{PORT}} {{BIND_ADDRESS}}
+protocol mqtt
+listener_allow_anonymous false
+max_connections 20
+max_qos 1
+
+# Giới hạn phù hợp đặc tả: payload JSON tối đa 2.048 byte.
+message_size_limit 2048
+max_packet_size 4096
+max_inflight_messages 20
+max_queued_messages 100
+max_queued_bytes 409600
+set_tcp_nodelay true
+
+# Retained message và dữ liệu phiên broker được lưu bền vững.
+persistence true
+persistence_location {{DATA_DIR}}
+persistence_file mosquitto.db
+autosave_interval 60
+
+# Nhật ký phục vụ chẩn đoán; không ghi payload hoặc mật khẩu.
+connection_messages true
+log_timestamp true
+log_dest stdout
+log_dest file {{LOG_FILE}}
+log_type error
+log_type warning
+log_type notice
+

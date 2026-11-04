@@ -1,0 +1,21 @@
+# ACL cho một phòng, device_id = room-01.
+# Không có quyền mặc định; mọi quyền đều được liệt kê tường minh.
+
+user room-01-device
+topic read smartroom/v1/devices/room-01/config/desired
+topic read smartroom/v1/devices/room-01/commands/request
+topic read smartroom/v1/devices/room-01/sync/request
+topic write smartroom/v1/devices/room-01/availability
+topic write smartroom/v1/devices/room-01/telemetry/sensors
+topic write smartroom/v1/devices/room-01/state/reported
+topic write smartroom/v1/devices/room-01/config/reported
+topic write smartroom/v1/devices/room-01/commands/result
+topic write smartroom/v1/devices/room-01/events
+topic write smartroom/v1/devices/room-01/alerts/events
+topic write smartroom/v1/devices/room-01/alerts/reported
+topic write smartroom/v1/devices/room-01/sync/status
+topic write smartroom/v1/devices/room-01/diagnostics
+
+user smartroom-backend
+topic readwrite smartroom/v1/devices/#
+

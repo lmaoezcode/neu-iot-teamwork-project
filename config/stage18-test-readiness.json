@@ -1,0 +1,266 @@
+{
+  "schema": "smartroom.stage18-readiness",
+  "schema_version": 1,
+  "scope": "CHUAN_BI_SOM_KHI_G17_DANG_MO",
+  "current_stage": 17,
+  "target_stage": 18,
+  "acceptance_updates_allowed": false,
+  "tests": [
+    {
+      "id": "KT02",
+      "readiness": "hybrid",
+      "automated_coverage": ["tools/uno_app_host_test.cpp", "web/src/state/realtime.test.ts"],
+      "remaining_evidence": "Cần LDR/UNO thật, mốc 15/30 giây, LED và log phục hồi.",
+      "needs_user_or_hardware": true,
+      "acceptance_result": "CHƯA THỰC HIỆN"
+    },
+    {
+      "id": "KT03",
+      "readiness": "hybrid",
+      "automated_coverage": ["tools/uno_app_host_test.cpp", "tests/integration/stage17-software-chain.mjs", "web/src/ui/render.test.ts"],
+      "remaining_evidence": "Cần thao tác bốn lệnh trên LED đèn/quạt mô phỏng thật và đối chiếu command_id.",
+      "needs_user_or_hardware": true,
+      "acceptance_result": "CHƯA THỰC HIỆN"
+    },
+    {
+      "id": "KT04",
+      "readiness": "hybrid",
+      "automated_coverage": ["server/test/api.test.ts", "tools/uno_app_host_test.cpp"],
+      "remaining_evidence": "Cần quay luồng hủy/xác nhận trên giao diện và quan sát tải thật.",
+      "needs_user_or_hardware": true,
+      "acceptance_result": "CHƯA THỰC HIỆN"
+    },
+    {
+      "id": "KT06",
+      "readiness": "hardware_primary",
+      "automated_coverage": [],
+      "remaining_evidence": "Cần chuỗi ánh sáng có kiểm soát, LED thật và đo vùng trễ/thời gian giữ 10 giây.",
+      "needs_user_or_hardware": true,
+      "acceptance_result": "CHƯA THỰC HIỆN"
+    },
+    {
+      "id": "KT07",
+      "readiness": "hybrid",
+      "automated_coverage": ["server/test/api.test.ts", "server/test/mqtt-schema.test.ts", "server/test/sqlite-repository.test.ts", "web/src/domain/config-validation.test.ts", "tools/uno_app_host_test.cpp", "tests/integration/stage17-software-chain.mjs"],
+      "remaining_evidence": "Cần xác nhận cùng phiên bản trên ESP32 NVS và UNO thật, không cập nhật một phần.",
+      "needs_user_or_hardware": true,
+      "acceptance_result": "CHƯA THỰC HIỆN"
+    },
+    {
+      "id": "KT08",
+      "readiness": "hybrid",
+      "automated_coverage": ["server/test/sqlite-repository.test.ts", "tests/integration/stage17-software-chain.mjs", "tools/uno_app_host_test.cpp"],
+      "remaining_evidence": "Cần reset ESP32 và toàn hệ thống thật, quan sát chân đầu ra và NVS.",
+      "needs_user_or_hardware": true,
+      "acceptance_result": "CHƯA THỰC HIỆN"
+    },
+    {
+      "id": "KT09",
+      "readiness": "hybrid",
+      "automated_coverage": ["tools/uno_app_host_test.cpp", "web/src/ui/render.test.ts"],
+      "remaining_evidence": "Cần LED/vùng SRF04 thật và thử lệnh tiện nghi khi ở hồ sơ Ra ngoài.",
+      "needs_user_or_hardware": true,
+      "acceptance_result": "CHƯA THỰC HIỆN"
+    },
+    {
+      "id": "KT10",
+      "readiness": "hardware_primary",
+      "automated_coverage": [],
+      "remaining_evidence": "Cần kích thích vùng cửa SRF04 thật và phân biệt hoạt động ngoài vùng.",
+      "needs_user_or_hardware": true,
+      "acceptance_result": "CHƯA THỰC HIỆN"
+    },
+    {
+      "id": "KT11",
+      "readiness": "hardware_primary",
+      "automated_coverage": [],
+      "remaining_evidence": "Cần hai lượt Tự động/Thủ công với ánh sáng và đầu ra thật.",
+      "needs_user_or_hardware": true,
+      "acceptance_result": "CHƯA THỰC HIỆN"
+    },
+    {
+      "id": "KT12",
+      "readiness": "hardware_primary",
+      "automated_coverage": [],
+      "remaining_evidence": "Cần kích thích cảm biến an toàn và đo độ trễ cảnh báo cục bộ không quá 1 giây.",
+      "needs_user_or_hardware": true,
+      "acceptance_result": "CHƯA THỰC HIỆN"
+    },
+    {
+      "id": "KT13",
+      "readiness": "hybrid",
+      "automated_coverage": ["server/test/cr04-alerts.test.ts", "web/src/state/realtime.test.ts"],
+      "remaining_evidence": "Cần chuỗi tắt tiếng/nguyên nhân mới/hết nguyên nhân/xác nhận trên thiết bị thật.",
+      "needs_user_or_hardware": true,
+      "acceptance_result": "CHƯA THỰC HIỆN"
+    },
+    {
+      "id": "KT14",
+      "readiness": "hybrid",
+      "automated_coverage": ["tests/integration/stage17-software-chain.mjs", "web/src/state/realtime.test.ts", "web/src/api/client.test.ts"],
+      "remaining_evidence": "Cần ngắt Wi-Fi/MQTT thật và chứng minh logic UNO cùng cảnh báo vẫn chạy.",
+      "needs_user_or_hardware": true,
+      "acceptance_result": "CHƯA THỰC HIỆN"
+    },
+    {
+      "id": "KT15",
+      "readiness": "hybrid",
+      "automated_coverage": ["tests/integration/stage17-software-chain.mjs", "server/test/service.test.ts", "web/src/domain/history.test.ts"],
+      "remaining_evidence": "Cần hàng đợi ESP32 thật, sự kiện ngoại tuyến và khoảng trống telemetry sau reconnect.",
+      "needs_user_or_hardware": true,
+      "acceptance_result": "CHƯA THỰC HIỆN"
+    },
+    {
+      "id": "KT16",
+      "readiness": "hybrid",
+      "automated_coverage": ["tests/integration/stage17-software-chain.mjs", "server/test/sqlite-repository.test.ts", "server/test/reconnect-soak.test.ts"],
+      "remaining_evidence": "Cần reconnect ESP32 thật, NVS N→N+1 và xác nhận không chạy lệnh hết hạn.",
+      "needs_user_or_hardware": true,
+      "acceptance_result": "CHƯA THỰC HIỆN"
+    },
+    {
+      "id": "KT17",
+      "readiness": "hybrid",
+      "automated_coverage": ["tools/uno_app_host_test.cpp"],
+      "remaining_evidence": "Cần reset riêng UNO và quay đầu ra/bắt tay/snapshot thật.",
+      "needs_user_or_hardware": true,
+      "acceptance_result": "CHƯA THỰC HIỆN"
+    },
+    {
+      "id": "KT18",
+      "readiness": "hybrid",
+      "automated_coverage": ["server/test/api.test.ts", "server/test/command-timeout.test.ts", "web/src/api/client.test.ts", "web/test-resilience/command-timeout-render.test.ts", "tests/integration/stage17-software-chain.mjs"],
+      "remaining_evidence": "Cần ngắt UART có kiểm soát, chờ timeout thật và quay trạng thái UI sau đồng bộ.",
+      "needs_user_or_hardware": true,
+      "acceptance_result": "CHƯA THỰC HIỆN"
+    },
+    {
+      "id": "KT19",
+      "readiness": "software_automated",
+      "automated_coverage": ["server/test/api.test.ts", "server/test/password.test.ts", "web/src/router.test.ts", "web/src/api/client.test.ts"],
+      "remaining_evidence": "Có thể thực hiện chính thức ở G18 bằng bộ test và một lượt duyệt trình duyệt; không cần board.",
+      "needs_user_or_hardware": false,
+      "acceptance_result": "CHƯA THỰC HIỆN"
+    },
+    {
+      "id": "KT20",
+      "readiness": "software_automated",
+      "automated_coverage": ["server/test/sqlite-repository.test.ts", "web/src/api/client.test.ts"],
+      "remaining_evidence": "Có thể thực hiện chính thức ở G18 bằng fixture thời gian, retention và truy vấn lọc; không cần board.",
+      "needs_user_or_hardware": false,
+      "acceptance_result": "CHƯA THỰC HIỆN"
+    },
+    {
+      "id": "KT21",
+      "readiness": "software_automated",
+      "automated_coverage": ["server/test/api.test.ts", "web/src/domain/history.test.ts", "tests/integration/stage17-software-chain.mjs"],
+      "remaining_evidence": "Có thể thực hiện chính thức ở G18 bằng dữ liệu có khoảng trống và render kiểm soát; không cần board.",
+      "needs_user_or_hardware": false,
+      "acceptance_result": "CHƯA THỰC HIỆN"
+    },
+    {
+      "id": "KT24",
+      "readiness": "hybrid",
+      "automated_coverage": ["server/test/cr04-alerts.test.ts", "web/src/ui/render.test.ts"],
+      "remaining_evidence": "Cần tạo báo an ninh/an toàn thật và chứng minh lệnh mở khóa mô phỏng bị chặn.",
+      "needs_user_or_hardware": true,
+      "acceptance_result": "CHƯA THỰC HIỆN"
+    },
+    {
+      "id": "KT25",
+      "readiness": "hardware_primary",
+      "automated_coverage": ["web/src/ui/render.test.ts"],
+      "remaining_evidence": "Cần MQ-2 thật qua cổng nguồn, thời gian làm nóng/hiệu chuẩn và chỉ số tương đối.",
+      "needs_user_or_hardware": true,
+      "acceptance_result": "CHƯA THỰC HIỆN"
+    },
+    {
+      "id": "KT26",
+      "readiness": "hybrid",
+      "automated_coverage": ["web/src/domain/config-validation.test.ts", "server/test/mqtt-schema.test.ts"],
+      "remaining_evidence": "Cần MQ-2 thật và quyền bảo trì để kiểm tra ngưỡng/cảnh báo.",
+      "needs_user_or_hardware": true,
+      "acceptance_result": "CHƯA THỰC HIỆN"
+    },
+    {
+      "id": "KT27",
+      "readiness": "hardware_primary",
+      "automated_coverage": ["web/src/ui/render.test.ts"],
+      "remaining_evidence": "Cần cảm biến lửa thật, kích thích an toàn và cảnh báo độc lập.",
+      "needs_user_or_hardware": true,
+      "acceptance_result": "CHƯA THỰC HIỆN"
+    },
+    {
+      "id": "KT28",
+      "readiness": "hardware_primary",
+      "automated_coverage": ["server/test/mqtt-schema.test.ts", "web/src/ui/render.test.ts"],
+      "remaining_evidence": "Cần gây lỗi/rút từng cảm biến an toàn thật và quan sát cảnh báo suy giảm.",
+      "needs_user_or_hardware": true,
+      "acceptance_result": "CHƯA THỰC HIỆN"
+    },
+    {
+      "id": "KT29",
+      "readiness": "hybrid",
+      "automated_coverage": ["server/test/cr04-alerts.test.ts", "web/src/state/realtime.test.ts"],
+      "remaining_evidence": "Cần cảnh báo an toàn thật để chứng minh không thể vô hiệu hóa bằng cấu hình/giao diện.",
+      "needs_user_or_hardware": true,
+      "acceptance_result": "CHƯA THỰC HIỆN"
+    },
+    {
+      "id": "KT30",
+      "readiness": "hybrid",
+      "automated_coverage": ["server/test/cr04-alerts.test.ts", "web/src/state/realtime.test.ts", "server/test/service.test.ts"],
+      "remaining_evidence": "Cần đồng thời nhiều nguồn cảnh báo thật và chuỗi hết từng nguyên nhân.",
+      "needs_user_or_hardware": true,
+      "acceptance_result": "CHƯA THỰC HIỆN"
+    },
+    {
+      "id": "KT31",
+      "readiness": "hardware_primary",
+      "automated_coverage": ["tests/integration/stage17-software-chain.mjs", "server/test/cr04-alerts.test.ts"],
+      "remaining_evidence": "Cần cảnh báo an toàn/an ninh và ưu tiên cục bộ khi ESP32/MQTT ngoại tuyến.",
+      "needs_user_or_hardware": true,
+      "acceptance_result": "CHƯA THỰC HIỆN"
+    },
+    {
+      "id": "KT36",
+      "readiness": "hybrid",
+      "automated_coverage": ["tests/integration/stage17-software-chain.mjs", "server/test/api.test.ts", "web/src/domain/history.test.ts"],
+      "remaining_evidence": "Cần LDR thật và đối chiếu cùng mẫu từ UNO đến màn hình/lịch sử.",
+      "needs_user_or_hardware": true,
+      "acceptance_result": "CHƯA THỰC HIỆN"
+    },
+    {
+      "id": "KT39",
+      "readiness": "hybrid",
+      "automated_coverage": ["tools/uno_app_host_test.cpp", "web/src/ui/render.test.ts"],
+      "remaining_evidence": "Cần LED khóa mô phỏng thật và ảnh giao diện giữ nhãn không xác minh cơ khí.",
+      "needs_user_or_hardware": true,
+      "acceptance_result": "CHƯA THỰC HIỆN"
+    },
+    {
+      "id": "KT38",
+      "readiness": "hardware_primary",
+      "automated_coverage": ["tests/integration/stage17-software-chain.mjs"],
+      "remaining_evidence": "Cần SRF04 thật, vật thể trong/ngoài vùng và đối chiếu sự kiện đầu-cuối.",
+      "needs_user_or_hardware": true,
+      "acceptance_result": "CHƯA THỰC HIỆN"
+    },
+    {
+      "id": "KT34",
+      "readiness": "software_manual",
+      "automated_coverage": ["web/src/notifications.test.ts"],
+      "remaining_evidence": "Cần một lượt trình duyệt thật để cấp/từ chối quyền và quan sát chống lặp thông báo.",
+      "needs_user_or_hardware": true,
+      "acceptance_result": "CHƯA THỰC HIỆN"
+    },
+    {
+      "id": "KT35",
+      "readiness": "conditional",
+      "automated_coverage": [],
+      "remaining_evidence": "Chỉ lập kế hoạch/thi hành nếu người dùng kích hoạt chức năng nhóm C MR-01.",
+      "needs_user_or_hardware": true,
+      "acceptance_result": "CHƯA THỰC HIỆN"
+    }
+  ]
+}

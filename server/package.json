@@ -1,0 +1,37 @@
+{
+  "name": "super-iot-server",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "start": "tsx src/index.ts",
+    "build": "tsc",
+    "hash-password": "tsx scripts/hash-password.ts",
+    "db:migrate": "tsx scripts/migrate-database.ts",
+    "db:retention": "tsx scripts/run-retention.ts",
+    "db:backup": "tsx scripts/backup-database.ts",
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.scripts.json",
+    "test": "vitest run --pool=threads --poolOptions.threads.singleThread=true",
+    "test:resilience": "vitest run test/command-timeout.test.ts test/mqtt-fuzz.test.ts test/reconnect-soak.test.ts --pool=threads --poolOptions.threads.singleThread=true",
+    "test:watch": "vitest --pool=threads --poolOptions.threads.singleThread=true"
+  },
+  "dependencies": {
+    "@fastify/cookie": "^11.0.2",
+    "@fastify/cors": "^11.1.0",
+    "better-sqlite3": "13.0.3",
+    "fastify": "^5.12.5",
+    "mqtt": "^5.14.1",
+    "zod": "^4.6.4"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^2.0.0"
+  }
+}

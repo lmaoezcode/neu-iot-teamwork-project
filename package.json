@@ -1,0 +1,36 @@
+{
+  "name": "super-iot-project",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@11.19.0",
+  "description": "Khung dự án hệ thống phòng thông minh IoT",
+  "workspaces": ["server", "web"],
+  "scripts": {
+    "server:dev": "pnpm --filter super-iot-server dev",
+    "web:dev": "pnpm --filter super-iot-web dev",
+    "check:stage10": "node tools/check-stage10.mjs",
+    "check:stage11": "node tools/check-stage11.mjs",
+    "check:stage12": "node tools/check-stage12.mjs",
+    "check:stage13": "node tools/check-stage13.mjs",
+    "check:stage14": "node tools/check-stage14.mjs",
+    "check:stage15": "node tools/check-stage15.mjs",
+    "check:stage16": "node tools/check-stage16.mjs",
+    "check:stage17": "node tools/check-stage17.mjs",
+    "check:stage18-readiness": "node tools/check-stage18-readiness.mjs",
+    "check:hardware-preparation": "powershell -NoProfile -ExecutionPolicy Bypass -File infrastructure/firmware/Test-HardwarePreparation.ps1",
+    "test:hardware-tooling": "powershell -NoProfile -ExecutionPolicy Bypass -File tests/integration/hardware-evidence-tooling.ps1",
+    "integration:stage17": "pnpm build && node tests/integration/stage17-software-chain.mjs",
+    "preflight:stage18": "node tests/acceptance/stage18-software-preflight.mjs",
+    "test:resilience": "pnpm -r --if-present run test:resilience",
+    "server:hash-password": "pnpm --filter super-iot-server hash-password",
+    "db:migrate": "pnpm --filter super-iot-server db:migrate",
+    "db:retention": "pnpm --filter super-iot-server db:retention",
+    "db:backup": "pnpm --filter super-iot-server db:backup",
+    "typecheck": "pnpm -r run typecheck",
+    "test": "pnpm -r run test",
+    "build": "pnpm -r run build"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

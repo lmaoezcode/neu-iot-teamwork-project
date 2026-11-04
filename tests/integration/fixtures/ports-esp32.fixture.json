@@ -1,0 +1,11 @@
+{
+  "schema": "smartroom.board-port-snapshot",
+  "schema_version": 1,
+  "captured_at": "2026-09-29T06:02:00.000Z",
+  "scope": "FIXTURE — không phải dữ liệu phần cứng",
+  "hardware_evidence": false,
+  "ports": [
+    { "port": "COM3", "name": "Fixture existing port", "hint": "test only" },
+    { "port": "COM8", "name": "Fixture ESP32 candidate", "hint": "test only" }
+  ]
+}
